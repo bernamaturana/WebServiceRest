@@ -16,6 +16,6 @@ public class SocketTextHandler extends TextWebSocketHandler {
             throws InterruptedException, IOException {
         String payload = message.getPayload();
         JSONObject jsonObject = new JSONObject(payload);
-        session.sendMessage(new TextMessage("hi" + jsonObject.get("user")));
+        session.sendMessage(new TextMessage("hi " + jsonObject.get("user")));
     }
 }
